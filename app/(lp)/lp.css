@@ -1,0 +1,105 @@
+/* Landing pages de venda — usa os tokens de app/globals.css */
+
+.lp { padding-bottom: 88px; } /* espaço para a barra fixa no celular */
+.lp-estreito { max-width: 820px; }
+.lp-centro { align-items: center; }
+
+.lp-topo { border-bottom: 1px solid var(--linha); padding-block: 16px; }
+
+.lp-pagina {
+  width: 100%; height: auto; display: block;
+  border: 1px solid var(--linha); background: var(--branco);
+  box-shadow: 8px 8px 0 var(--sombra-capa);
+}
+
+/* Hero */
+.lp-hero { display: flex; flex-wrap: wrap; align-items: center; gap: 56px; padding-block: 64px 88px; }
+.lp-hero__texto { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
+.lp-hero__titulo { font-size: clamp(36px, 5vw, 54px); }
+.lp-hero__acao { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; padding-top: 4px; }
+.lp-hero__paginas { flex: 1 1 440px; min-width: 0; position: relative; aspect-ratio: 16 / 13; }
+.lp-hero__paginas .lp-pagina { position: absolute; width: 82%; }
+.lp-hero__paginas .lp-pagina:nth-child(1) { top: 0; right: 0; transform: rotate(3deg); }
+.lp-hero__paginas .lp-pagina:nth-child(2) { top: 22%; left: 0; transform: rotate(-3deg); }
+.lp-hero__paginas .lp-pagina:nth-child(3) { bottom: 0; right: 6%; box-shadow: 10px 10px 0 var(--dourado); }
+
+/* Botão e preço */
+.lp-botao { min-height: 58px; font-size: 17px; padding-inline: 32px; }
+.secao--verde a.lp-botao--claro { background: var(--marfim); color: var(--verde); border-color: var(--marfim); }
+.secao--verde a.lp-botao--claro:hover { background: var(--branco); color: var(--verde); }
+.lp-preco { display: flex; flex-direction: column; gap: 2px; }
+.lp-preco__de { font-size: 14px; color: var(--texto-apoio); text-decoration: line-through; }
+.lp-preco__valor { font-size: 34px; font-weight: 900; line-height: 1.1; }
+.lp-preco__condicao { font-size: 14px; color: var(--texto-apoio); }
+
+/* Identificação */
+.lp-dores { list-style: none; margin: 32px 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.lp-dores li {
+  font-size: 19px; line-height: 1.5; color: var(--texto-suave);
+  padding: 18px 22px; background: var(--marfim); border: 1px solid var(--linha);
+}
+.lp-virada { font-size: 22px; line-height: 1.45; font-weight: 900; }
+
+/* Mapa */
+.lp-chips { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.lp-chips li { border: 1px solid var(--verde); padding: 6px 12px; font-size: 14px; font-weight: 700; }
+
+/* Anatomia */
+.lp-anatomia { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.lp-anatomia li { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid #c9d3cc; }
+.lp-anatomia li div { display: flex; flex-direction: column; gap: 4px; }
+.lp-anatomia strong { font-size: 18px; font-weight: 900; }
+.lp-anatomia li span:not(.lp-anatomia__num) { font-size: 16px; line-height: 1.5; color: var(--texto-suave); }
+.lp-anatomia__num {
+  flex: none; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;
+  background: var(--verde); color: var(--marfim); font-weight: 900;
+}
+
+/* Galeria */
+.lp-galeria { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+/* Oferta */
+.lp-oferta { display: flex; flex-wrap: wrap; gap: 40px; align-items: stretch; border: 2px solid var(--verde); background: var(--branco); padding: 40px; }
+.lp-oferta__lista { flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+.lp-oferta__caixa {
+  flex: 0 1 340px; min-width: 0; background: var(--verde); color: var(--marfim);
+  padding: 32px; display: flex; flex-direction: column; justify-content: center; gap: 20px;
+}
+.lp-oferta__caixa .lp-preco__de, .lp-oferta__caixa .lp-preco__condicao { color: #c9d3cc; }
+.lp-oferta__caixa .lp-botao { background: var(--marfim); color: var(--verde); border-color: var(--marfim); }
+.lp-oferta__caixa .lp-botao:hover { background: var(--branco); color: var(--verde); }
+@media (max-width: 720px) { .lp-oferta { padding: 24px; } }
+
+/* Garantia */
+.lp-garantia { display: flex; flex-wrap: wrap; align-items: center; gap: 32px; max-width: 820px; }
+.lp-garantia > div:last-child { flex: 1 1 320px; display: flex; flex-direction: column; gap: 10px; }
+.lp-selo {
+  width: 112px; height: 112px; border-radius: 50%; border: 3px solid var(--dourado);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; flex: none;
+}
+.lp-selo span { font-size: 44px; font-weight: 900; line-height: 1; }
+.lp-selo small { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+
+/* Fechamento */
+.lp-fechamento { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.lp-fechamento .lp-preco__valor { color: var(--marfim); }
+
+/* Rodapé */
+.lp-rodape { background: var(--verde-escuro); color: #a9b6ae; font-size: 13px; padding-block: 40px; }
+.lp-rodape .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+
+/* Barra fixa de compra no celular */
+.lp-barra { display: none; }
+@media (max-width: 720px) {
+  .lp-hero { padding-block: 40px 64px; gap: 40px; }
+  .lp-hero__paginas { aspect-ratio: 16 / 14; }
+  .lp-barra {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: var(--marfim); border-top: 1px solid var(--linha); box-shadow: 0 -6px 20px rgba(32, 51, 43, .08);
+  }
+  .lp-barra .lp-preco__valor { font-size: 22px; }
+  .lp-barra .lp-preco__de, .lp-barra .lp-preco__condicao { display: none; }
+  .lp-barra .lp-botao { min-height: 50px; padding-inline: 20px; font-size: 16px; flex: 1; }
+}

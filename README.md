@@ -9,7 +9,10 @@ Site institucional e catálogo de materiais da editora Uma Biblicamente. As vend
 
 ## Estrutura
 
-- `app/` — páginas: home, `/materiais` (catálogo com filtro por movimento) e `/materiais/[slug]` (página de cada material)
+- `app/(site)/` — site institucional, com topo e rodapé: home, `/materiais` (catálogo com filtro por movimento) e `/materiais/[slug]` (página de cada material)
+- `app/(lp)/lp/[slug]` — landing pages de venda, sem navegação, uma por produto
+- `content/landing-pages.ts` — conteúdo das landing pages, montado em blocos (identificação, mapa, anatomia, galeria, públicos, passos, depoimentos, oferta, garantia, FAQ, fechamento). Para criar uma nova LP, adicione um item ao array e as imagens em `public/lp/<slug>/`
+- `components/lp/` — os blocos e o botão de compra (repassa utm_*, src, fbclid e gclid para o link da Cakto)
 - `components/` — topo, rodapé, capa, card de material, marca
 - `content/materiais.ts` — catálogo provisório (vai para o CMS). Textos entre colchetes são espaços reservados
 - `app/globals.css` — tokens de cor e estilos do manual de marca
